@@ -1,3 +1,6 @@
+def calculate_factor(buy_rate, upsell):
+    return buy_rate + upsell
+
 funding_request = int(input("Requested Funding Amount? $"))
 while True:
     payments = int(input("How many payments? "))
@@ -32,7 +35,7 @@ print("Term:", term, " months")
 
 print("Buy Rate: ", buy_rate)
 
-factor = buy_rate + upsell
+factor = calculate_factor(buy_rate, upsell)
 print("Factor: ", factor)
 
 print(f"Origination Fee: ${origination_fee:,.2f}")
