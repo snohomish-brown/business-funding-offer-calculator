@@ -1,6 +1,14 @@
 funding_request = int(input("Requested Funding Amount? $"))
-payments = int(input("How many payments? "))
-payment_freq = input("Daily(d)? Weekly(w)? or Monthly(m)? ")
+while True:
+    payments = int(input("How many payments? "))
+    if payments > 0:
+        break
+    print("There's not enough payments to repay the loan! Please try again.")
+while True:
+    payment_freq = input("Daily(d)? Weekly(w)? or Monthly(m)? ").lower()
+    if payment_freq in ("d", "w", "m"):
+        break
+    print("Please enter d, w, or m.")
 buy_rate = float(input("What is the Buy Rate? "))
 upsell = float(input("Upsell = (Factor Rate) - (Buy Rate)? "))
 origination = float(input("% Origination Fee? "))
@@ -19,8 +27,6 @@ elif payment_freq == "w":
     term = payments / 4
 elif payment_freq == "m": 
     term = payments / 1
-
-payment_freq = input("Daily(d)? Weekly(w)? or Monthly(m)? ")
 
 print("Term:", term, " months")
 
