@@ -3,7 +3,7 @@ while True:
     payments = int(input("How many payments? "))
     if payments > 0:
         break
-    print("There's not enough payments to repay the loan! Please try again.")
+    print("There are not enough payments to repay the loan! Please try again.")
 while True:
     payment_freq = input("Daily(d)? Weekly(w)? or Monthly(m)? ").lower()
     if payment_freq in ("d", "w", "m"):
