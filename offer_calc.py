@@ -40,7 +40,7 @@ print("Term:", term, " months")
 print("Buy Rate: ", buy_rate)
 
 factor = calculate_factor(buy_rate, upsell)
-print("Factor: ", factor)
+print(f"Factor: {factor:.3f}")
 
 print(f"Origination Fee: ${origination_fee:,.2f}")
 
