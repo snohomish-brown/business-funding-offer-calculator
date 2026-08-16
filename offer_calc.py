@@ -2,6 +2,8 @@ def calculate_factor(buy_rate, upsell):
     return buy_rate + upsell
 def calculate_payback(funding_request, factor):
     return funding_request * factor
+def calculate_payment(payback_amount, payments):
+    return payback_amount / payments
 
 funding_request = int(input("Requested Funding Amount? $"))
 while True:
@@ -43,7 +45,7 @@ print("Factor: ", factor)
 print(f"Origination Fee: ${origination_fee:,.2f}")
 
 payback_amt = calculate_payback(funding_request, factor)
-payment_amt = payback_amt / payments
+payment_amt = calculate_payment(payback_amt, payments)
 
 print(f"Payback Amount: ${payback_amt:,.2f}")
 print(f"Payment Amount: ${payment_amt:,.2f}") 
